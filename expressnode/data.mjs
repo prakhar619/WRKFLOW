@@ -1,13 +1,13 @@
-import {User,Goal,Task,ColorPalette} from './Schemas.mjs';
+import {User,Goal,Task,ColorPalette} from './Schemas.mjs' ;
 
-import express from 'express';
-import mongoose from 'mongoose';
+import express from 'express' ;
+import mongoose from 'mongoose' ;
 
-import path from "path";
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import path from "path" ; 
+import { fileURLToPath } from 'url' ;
+import { dirname } from 'path' ;
+const __filename = fileURLToPath(import.meta.url) ;
+const __dirname = dirname(__filename) ;
 
 export default function Data(app){
 
@@ -19,7 +19,7 @@ export default function Data(app){
         await Promise.all(this.map(fn));
     }
 
-        app.use("/UserData",async function(req,res){
+    app.use("/UserData",async function(req,res){
             let userId = req.path.substring(1);
             if(userId === "default")
                 return;

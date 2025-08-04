@@ -1,25 +1,24 @@
-import {User,Goal,Task,ColorPalette} from './Schemas.mjs';
-import ColorPaletteList from './colorpalette.mjs';
+import {User,Goal,Task,ColorPalette} from './Schemas.mjs' ;
+import ColorPaletteList from './colorpalette.mjs' ; 
 
-import mongoose from 'mongoose';
-import express from "express";
-import cors from 'cors';
-import path from "path";
+import mongoose from 'mongoose' ; 
+import express from "express" ; 
+import cors from 'cors' ; 
+import path from "path" ; 
 
-import bodyParser from "body-parser";
+import bodyParser from "body-parser" ;
 
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+import { fileURLToPath } from 'url' ;
+import { dirname } from 'path' ;
+const __filename = fileURLToPath(import.meta.url) ;
+const __dirname = dirname(__filename) ;
 
-import Pages from './pages.mjs';
-import Form from './form.mjs';
-import Data from './data.mjs';
+import Pages from './pages.mjs' ;
+import Form from './form.mjs' ;
+import Data from './data.mjs' ;
 let port = 5000;
 
-
-let app = express();
+let app = express() ;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
